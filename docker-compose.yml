@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    container_name: "mysql"
+    volumes:
+      - "./db:/var/lib/mysql"
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=market
+      - MYSQL_USER=brs-root
+      - MYSQL_PASSWORD=root
+  rabbit:
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+      timeout: 5s
+      retries: 5
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
