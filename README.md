@@ -55,7 +55,7 @@ It looks as follows:
 </p>
 
 ## Technology ##
-Following libraries were used during the development of this application:
+The following libraries were used during the development of this application:
 
 - **Spring Boot** - Server side framework
 - **MySQL** - Database
