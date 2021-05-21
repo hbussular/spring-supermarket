@@ -165,7 +165,7 @@ Password:guest
 ```
 
 ## API Documentation ##
-IThe tool for API documentation used in this project is Swagger. You can open it inside a browser at the following url -
+The tool for API documentation used in this project is Swagger. You can open it inside a browser at the following url -
 
 http://localhost:8080/swagger-ui.html#
 
